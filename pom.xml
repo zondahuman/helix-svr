@@ -26,6 +26,21 @@
     </properties>
 
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.helix/helix-provisioning -->
+        <dependency>
+            <groupId>org.apache.helix</groupId>
+            <artifactId>helix-provisioning</artifactId>
+            <version>0.7.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.helix/helix-ipc -->
+        <dependency>
+            <groupId>org.apache.helix</groupId>
+            <artifactId>helix-ipc</artifactId>
+            <version>0.7.1</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.apache.helix/helix -->
         <dependency>
             <groupId>org.apache.helix</groupId>
@@ -33,6 +48,7 @@
             <version>0.7.1</version>
             <type>pom</type>
         </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.apache.helix/helix-core -->
         <dependency>
