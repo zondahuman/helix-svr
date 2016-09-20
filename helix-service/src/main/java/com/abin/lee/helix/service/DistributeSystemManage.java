@@ -14,10 +14,12 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class DistributeSystemManage {
-    private static final String ZK_ADDRESS = "172.16.2.133:2199";
+//    private static final String ZK_ADDRESS = "172.16.2.133:2199";
+    private static final String ZK_ADDRESS = "172.16.2.134:2199";
+    private static final String CLUSTER_NAME = "helix-demo";
 
     public static void main(String[] args) {
-//        createCluster();
+        createCluster();
         getCluster();
         createConfigNode();
         instanceList();
@@ -27,7 +29,6 @@ public class DistributeSystemManage {
         // Create setup tool instance
         ZKHelixAdmin admin = new ZKHelixAdmin(ZK_ADDRESS);
 
-        String CLUSTER_NAME = "helix-demo";
         //Create cluster namespace in zookeeper
         admin.addCluster(CLUSTER_NAME);
     }
@@ -43,7 +44,6 @@ public class DistributeSystemManage {
 
     public static void createConfigNode(){
         ZKHelixAdmin admin = new ZKHelixAdmin(ZK_ADDRESS);
-        String CLUSTER_NAME = "helix-demo";
         int NUM_NODES = 2;
         String hosts[] = new String[]{"localhost","localhost"};
         String ports[] = new String[]{"7000","7001"};
@@ -62,7 +62,6 @@ public class DistributeSystemManage {
     }
 
     public static void instanceList(){
-        String CLUSTER_NAME = "helix-demo";
         ZKHelixAdmin zkHelixAdmin = new ZKHelixAdmin(ZK_ADDRESS);
         List<String> instanceList = zkHelixAdmin.getInstancesInCluster(CLUSTER_NAME);
         System.out.println("instanceList=" + JsonUtil.toJson(instanceList));
