@@ -26,7 +26,6 @@
     </properties>
 
     <dependencies>
-
         <!-- https://mvnrepository.com/artifact/org.apache.helix/helix-provisioning -->
         <dependency>
             <groupId>org.apache.helix</groupId>
