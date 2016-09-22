@@ -21,8 +21,9 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class DistributeSystemManage {
-    //    private static final String ZK_ADDRESS = "172.16.2.133:2199";
-    private static final String ZK_ADDRESS = "172.16.2.134:2199";
+//    private static final String ZK_ADDRESS = "172.16.2.133:2199";
+//    private static final String ZK_ADDRESS = "172.16.2.134:2199";
+    private static final String ZK_ADDRESS = "172.16.2.134:2181";
     private static final String CLUSTER_NAME = "helix-demo";
 
     public static void main(String[] args) {
