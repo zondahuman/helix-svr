@@ -23,6 +23,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <org.springframework.version>4.2.5.RELEASE</org.springframework.version>
+        <helix.version>0.7.1</helix.version>
     </properties>
 
     <dependencies>
@@ -31,31 +32,46 @@
         <dependency>
             <groupId>org.apache.helix</groupId>
             <artifactId>helix-provisioning</artifactId>
-            <version>0.7.1</version>
+            <version>${helix.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.helix/helix-ipc -->
         <dependency>
             <groupId>org.apache.helix</groupId>
             <artifactId>helix-ipc</artifactId>
-            <version>0.7.1</version>
+            <version>${helix.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.helix/helix -->
         <dependency>
             <groupId>org.apache.helix</groupId>
             <artifactId>helix</artifactId>
-            <version>0.7.1</version>
+            <version>${helix.version}</version>
             <type>pom</type>
         </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/org.apache.helix/helix-core -->
         <dependency>
             <groupId>org.apache.helix</groupId>
             <artifactId>helix-core</artifactId>
-            <version>0.7.1</version>
+            <version>${helix.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.helix/helix-agent -->
+        <dependency>
+            <groupId>org.apache.helix</groupId>
+            <artifactId>helix-agent</artifactId>
+            <version>${helix.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.helix/helix-admin-webapp -->
+        <dependency>
+            <groupId>org.apache.helix</groupId>
+            <artifactId>helix-admin-webapp</artifactId>
+            <version>${helix.version}</version>
+        </dependency>
+
+
+
+
 
         <dependency>
             <groupId>org.jetbrains</groupId>
