@@ -1,4 +1,4 @@
-package com.abin.lee.helix.common;
+package com.abin.lee.helix.common.util;
 
 import org.apache.http.HttpEntityEnclosingRequest;
 import org.apache.http.HttpRequest;

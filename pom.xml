@@ -23,7 +23,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <org.springframework.version>4.2.5.RELEASE</org.springframework.version>
-        <helix.version>0.7.1</helix.version>
+        <helix.version>0.7.2-SNAPSHOT</helix.version>
     </properties>
 
     <dependencies>

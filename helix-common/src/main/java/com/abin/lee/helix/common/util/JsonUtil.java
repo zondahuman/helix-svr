@@ -1,4 +1,4 @@
-package com.abin.lee.helix.common;
+package com.abin.lee.helix.common.util;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.type.TypeReference;

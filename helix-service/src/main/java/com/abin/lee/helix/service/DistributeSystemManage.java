@@ -1,9 +1,9 @@
 package com.abin.lee.helix.service;
 
-import com.abin.lee.helix.common.JsonUtil;
+import com.abin.lee.helix.common.util.JsonUtil;
 import org.apache.helix.ZNRecord;
-import org.apache.helix.api.id.StateModelDefId;
 import org.apache.helix.manager.zk.ZKHelixAdmin;
+import org.apache.helix.model.IdealState;
 import org.apache.helix.model.InstanceConfig;
 import org.apache.helix.model.StateModelDefinition;
 import org.apache.helix.tools.StateModelConfigGenerator;
@@ -37,10 +37,10 @@ public class DistributeSystemManage {
 
     public static void createCluster() {
         // Create setup tool instance
-        ZKHelixAdmin admin = new ZKHelixAdmin(ZK_ADDRESS);
+        ZKHelixAdmin helixAdmin = new ZKHelixAdmin(ZK_ADDRESS);
 
         //Create cluster namespace in zookeeper
-        admin.addCluster(CLUSTER_NAME);
+        helixAdmin.addCluster(CLUSTER_NAME);
     }
 
     public static void getCluster() {
@@ -161,5 +161,27 @@ public class DistributeSystemManage {
         List<String> stateList = zkHelixAdmin.getStateModelDefs(CLUSTER_NAME);
         System.out.println("stateList=" + JsonUtil.toJson(stateList));
     }
+
+
+
+    public static void createResource() {
+        // Create setup tool instance
+        ZKHelixAdmin helixAdmin = new ZKHelixAdmin(ZK_ADDRESS);
+
+        //Create cluster namespace in zookeeper
+//        helixAdmin.addResource(CLUSTER_NAME, "mydb", IdealState.stringMapFromParticipantStateMap(StateModelConfigGenerator.generateConfigForMasterSlave()));
+    }
+
+    public static void resourceList() {
+        // Create setup tool instance
+        // Note: ZK_ADDRESS is the host:port of Zookeeper
+
+        ZKHelixAdmin zkHelixAdmin = new ZKHelixAdmin(ZK_ADDRESS);
+        List<String> clusterList = zkHelixAdmin.getClusters();
+        System.out.println("clusterList=" + JsonUtil.toJson(clusterList));
+    }
+
+
+
 
 }

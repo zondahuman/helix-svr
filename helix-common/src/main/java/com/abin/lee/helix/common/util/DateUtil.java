@@ -1,4 +1,4 @@
-package com.abin.lee.helix.common;
+package com.abin.lee.helix.common.util;
 
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.apache.commons.lang3.time.FastDateFormat;
